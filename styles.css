@@ -1,0 +1,419 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%;
+  background-color: white;
+}
+
+.logo {
+  cursor: pointer;
+}
+
+.nav__links a,
+.cta,
+.overlay__content a {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  color: black;
+  text-decoration: none;
+}
+
+.nav__links {
+  list-style: none;
+  display: flex;
+}
+
+.nav__links li {
+  padding: 0px 20px;
+}
+
+.nav__links li a {
+  transition: color 0.3s ease 0s;
+}
+
+.nav__links li a:hover {
+  color: orange;
+}
+
+.cta {
+  padding: 9px 25px;
+  background-color: rgba(0, 136, 169, 1);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease 0s;
+}
+
+.cta:hover {
+  background-color: rgba(0, 136, 169, 0.8);
+}
+
+/* Mobile Nav */
+
+.menu {
+  display: none;
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: #24252a;
+  overflow-x: hidden;
+  transition: width 0.5s ease 0s;
+}
+
+.overlay--active {
+  width: 100%;
+}
+
+.overlay__content {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay a {
+  padding: 15px;
+  font-size: 36px;
+  display: block;
+  transition: color 0.3s ease 0s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+  color: #0088a9;
+}
+
+.overlay .close {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+  color: #edf0f1;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {
+    font-size: 20px;
+  }
+
+  .overlay .close {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+
+  .nav__links,
+  .cta {
+    display: none;
+  }
+
+  .menu {
+    display: initial;
+  }
+}
+
+.nav-icon img {
+  margin-right: 18px;
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 10%;
+  background-color: white;
+}
+
+.main img {
+  height: 600px;
+  transition: transform .2s
+}
+
+.main img:hover {
+  transform: scale(1.08);
+}
+
+h1 {
+  font-size: 80px;
+}
+h2{
+  font-size: 35px;
+}
+h3{
+  font-size: 23px;
+}
+.mainborder {
+  border: 2px solid #5962B8;
+  padding: 10px;
+  display: inline;
+}
+
+.mainborder {
+  color: #5962B8;
+}
+
+.mainbtn {
+  font-size: 15px;
+  margin-top: 20px;
+  background-color: #5962B8;
+  padding: 9px 25px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease 0s;
+}
+
+
+.mainstats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px 10%;
+}
+
+.h2color {
+  color: #5962B8;
+}
+
+.offer {
+  background-color: #eeeeee;
+  text-align: center;
+  padding-bottom: 80px;
+}
+
+.offercolor {
+  color: #5962B8;
+}
+
+.offer h2 {
+  padding: 50px;
+}
+
+
+/* offer-cards */
+.BOXES {
+  display: flex;
+  margin-left: 40px;
+  margin-right: 40px;
+  justify-content: center;
+  position: relative;
+}
+
+.box:hover {
+  background-color: #5962B8;
+  transition: all 0.3s ease;
+  zoom: 10fr;
+  color: white;
+}
+
+.box {
+  height: auto;
+  width: 50vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 1px 1px 2px 1px rgba(1, 0, 0, 0.3);
+  background-color: white;
+  border-radius: 20px;
+  margin: 0px 40px 0px 40px;
+  padding-bottom: 40px;
+}
+
+.box img {
+  margin-top: 20px;
+}
+.boximg{
+  padding: 30px;
+}
+
+.BOXES p {
+  margin: 20px 20px 10px 20px;
+}
+
+.BOXES H3 {
+  color: orange;
+}
+
+
+@media (max-width: 1200px) {
+  .BOXES {
+    display: grid;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+  }
+
+  .box {
+    margin: 0px 0px 30px 0px;
+    width: auto;
+  }
+}
+
+/* offer-cards-end*/
+
+.collection {
+  background-color: white;
+  text-align: center;
+  padding-top: 50px;
+
+}
+
+.collectioncolor {
+  color: black;
+}
+
+.collectioncolor2 {
+  color: orange;
+}
+
+.collectionh2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 15%;
+}
+
+/* collection card */
+.row1 {
+  display: flex;
+  padding: 20px 50px;
+  justify-content: center;
+  position: relative;
+  height: 400px;
+}
+.row1 img {
+  margin: 10px 30px;
+  cursor: pointer;
+}
+.row1 img:hover {
+  transition: all 0.3s ease;
+  transform: scale(1.05);
+}
+/* collection card-end */
+
+.arrows img {
+  margin: 10px 20px 30px 20px;
+  cursor: pointer;
+}
+
+.arrows img:hover {
+  transition: all 0.3s ease;
+  transform: scale(1.05);
+
+}
+
+.top-items {
+  display: flex;
+  height: 500px;
+  background-color: #eeeeee;
+  padding: 0px 160px 0px 160px;
+  align-items: center;
+} 
+.top-itemstext h2{
+  margin: 30px 0px 30px 50px;
+  padding-left: 70px;
+  align-items: center;
+}
+
+.top-itemstext h3{
+  margin-left: 140px;
+  
+}
+.topitempara{
+  padding: 40px 0px 40px 150px;
+  align-items: center;
+}
+.topitempara li{
+  line-height: 40px;
+}
+
+.feedback{
+  padding:50px;
+}
+.cards{
+  display: flex;
+  margin: 50px 50px 0px 50px;
+  justify-content: center;
+  position: relative;
+}
+.card{
+  height: auto;
+  width: 50vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid black;
+  background-color:#eeeeee;
+  border-radius: 5px;
+  margin: 0px 40px 0px 40px;
+  padding-bottom: 40px;
+}
+.card p{
+  margin-right:30px;
+  margin-left:30px;
+  text-align: left;
+}
+.row{
+  text-align: left;
+  margin-left: 10px;
+}
+.row h4{
+  color: darkorange;
+
+}
+.flex{
+  display: flex;
+  padding-top:20px;
+  padding-left: 20px;
+}
+
+
+.footer{
+  padding: 0 10% 0 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  background: #edf0f1; 
+}
+.footer1{ 
+  display: inline;
+  text-align: left;
+  width: 500px;
+}
+.footer1 img{
+  padding:10px 10px 10px 0px;
+}
+.footer2{
+ text-align: left;
+ padding: 20px; 
+  line-height: 30px;
+
+}
+.footer2 ul {
+  text-decoration:none; 
+  cursor:pointer;  
+  color: #24252a;
+}
+.footer2 ul:hover{
+  color:orange;
+}
